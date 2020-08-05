@@ -31,7 +31,7 @@ app.get('/', function(req,res){
             // const metaData = intraDay;
             // console.log(metaData);
             var intraDay_data = { intraday : intraDay};
-            res.render('list', {intraDay_data: intraDay_data} );
+            res.render('list', {intraDay_data: JSON.stringify(intraDay_data)} );
         })
         .catch((err) => {
             // Handle the error
