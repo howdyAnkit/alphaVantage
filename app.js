@@ -10,8 +10,7 @@ app.set("view engine", "ejs");                                                 /
 app.use(bodyParser.urlencoded({extended:true}));
 
 var Alpha = require('alpha_vantage_api_wrapper').Alpha;                       //Alpha Wrapper
-var alpha = new Alpha('JK991YIUNZ14APGX');
-
+var alpha = new Alpha('JK991YIUNZ14APGX');  
 var stock_Dates = [];                                                         //Array Of Data      
 var stock_opens = [];
 var stock_highs = [];

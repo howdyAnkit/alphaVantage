@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherApp</title>
+    <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 
 <body>
@@ -14,28 +16,39 @@
         <button type="submit">Search</button>
     </form>
 
-        <%for(var i=0; i<=5; i++){%>
-            <li><%- stock_Dates[i] %></li>
-            <li><%- stock_opens[i] %></li>
-            <li><%- stock_highs[i] %></li>
-            <li><%- stock_lows[i] %></li>
-            <li><%- stock_closes[i] %></li>
-            <li><%- stock_volumes[i] %></li>
-        <%}%>
+    <canvas id="chart" ></canvas>
 
-    <script src="path/to/alphavantage/dist/bundle.js"></script>
+    <%for(var i=0; i<=5; i++){%>
+        <li><%- stock_Dates[i] %></li>
+        <li><%- stock_opens[i] %></li>
+        <li><%- stock_highs[i] %></li>
+        <li><%- stock_lows[i] %></li>
+        <li><%- stock_closes[i] %></li>
+        <li><%- stock_volumes[i] %></li>
+    <%}%>
 
-    <script type="application/javascript">
-          /**
-           * Init Alpha Vantage with your API key.
-           *
-           * @param {String} key
-           *   Your Alpha Vantage API key.
-           */
-          const alpha = alphavantage({
-              key: 'VIROL8PEM17WAZYM'
-          });
-      </script>
+    <script>
+        var datesList = <%- JSON.stringify(stock_Dates) %>;
+        var closingList = <%- JSON.stringify(stock_closes) %> ;
+        var ctx = document.getElementById('chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                labels: datesList,closingList,
+                datasets: [{
+                label: "Microsoft's Closing Stock Values",
+                data: closingList,
+                borderColor: "#3e95cd",
+                backgroundColor: "rgba(118,152,255,0.4)"
+            }]
+        },
+        options: {
+                responsive:true,
+                maintainAspectRatio: true,
+            },
+        });
+    </script>
+
 </body>
 
 </html>
