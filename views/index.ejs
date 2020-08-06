@@ -7,7 +7,16 @@
 </head>
 <body>
     <h2>Index</h2>
-        <%= vantage %>
 
+    <%for(var i=0; i<=5; i++){%>                <!-- Change the Value of i if in need of data more than 5 -->
+        <li><%- stock_Dates[i] %></li>
+        <li><%- stock_opens[i] %></li>
+        <li><%- stock_highs[i] %></li>
+        <li><%- stock_lows[i] %></li>
+        <li><%- stock_closes[i] %></li>
+        <li><%- stock_volumes[i] %></li>
+    <%}%>
+    
+    
 </body>
 </html>

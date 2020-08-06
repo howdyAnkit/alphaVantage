@@ -14,11 +14,18 @@
         <button type="submit">Search</button>
     </form>
 
-    <%- intraDay_data %>
+        <%for(var i=0; i<=5; i++){%>
+            <li><%- stock_Dates[i] %></li>
+            <li><%- stock_opens[i] %></li>
+            <li><%- stock_highs[i] %></li>
+            <li><%- stock_lows[i] %></li>
+            <li><%- stock_closes[i] %></li>
+            <li><%- stock_volumes[i] %></li>
+        <%}%>
 
     <script src="path/to/alphavantage/dist/bundle.js"></script>
 
-    <!-- <script type="application/javascript">
+    <script type="application/javascript">
           /**
            * Init Alpha Vantage with your API key.
            *
@@ -28,7 +35,7 @@
           const alpha = alphavantage({
               key: 'VIROL8PEM17WAZYM'
           });
-      </script> -->
+      </script>
 </body>
 
 </html>
