@@ -1,8 +1,6 @@
-# 
-
-
-
-
+# STEPS TO RUN THE PROGRAM
+1) NPM INSTALL (Installs all the neccessary Packages)
+2) nodemon app.js
 
 # alphaVantage-
 
