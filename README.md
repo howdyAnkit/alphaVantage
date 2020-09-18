@@ -1,12 +1,27 @@
-# alphaVantage
+# 
+
+
+
+
+
+# alphaVantage-
 
 GET REAL TIME STOCK DATA WITH CHARTS AND INTRADAY STOCKS
 
-TECH-STACK
-JAVASCRIPT
-CHART.JS
-HTML CSS
-NODE
+Workflow :-
 
-ENDPOINT
+1) USES GET/POST METHOD
+2) Triggers the "ENDPOINT" and gives the real time stock updates regarding the SAME
+3) Generates Charts using charts.js
+
+
+technologies:-
+
+1) JAVASCRIPT
+2) CHART.JS
+3) HTML
+4) CSS
+5) NODEJS
+
+ENDPOINT:-
 ALPHAVANTAGE-WRAPPER
