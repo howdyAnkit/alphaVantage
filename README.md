@@ -1,6 +1,6 @@
 # STEPS TO RUN THE PROGRAM
-1) NPM INSTALL (Installs all the neccessary Packages)
-2) nodemon app.js
+1) npm install (Installs all the neccessary Packages)
+2) nodemon app.js (Note:- lite-server won't work)
 
 # alphaVantage-
 
