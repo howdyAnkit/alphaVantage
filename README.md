@@ -17,9 +17,9 @@ technologies:-
 
 1) JAVASCRIPT
 2) CHART.JS
-3) HTML
-4) CSS
-5) NODEJS
+3) Html & Css
+5) Node
+6) Express
 
 ENDPOINT:-
 ALPHAVANTAGE-WRAPPER
